@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forex Survivors - Survive the Market</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(10,10,10,0.95);
+    border-bottom: 1px solid #222;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav h2 { color: gold; }
+nav a { color: #ccc; margin-left: 20px; text-decoration: none; transition: 0.3s; }
+nav a:hover { color: gold; }
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: gold;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 2s forwards 0.5s;
+}
+
+.hero p {
+    color: #ccc;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 2s forwards 1.5s;
+}
+
+.btn {
+    padding: 14px 30px;
+    background: gold;
+    color: black;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f1c40f;
+    transform: scale(1.05);
+}
+
+/* CARDS */
+section {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 { color: gold; margin-bottom: 20px; }
+p { color: #ccc; line-height: 1.6; }
+
+.card {
+    background: #111;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardFade 1s forwards;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #111;
+    color: #777;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cardFade {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* CANVAS BACKGROUND */
+#chart-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* LIVE TICKER */
+.ticker {
+    background: #111;
+    color: gold;
+    padding: 10px 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.ticker span {
+    display: inline-block;
+    padding-right: 50px;
+    animation: tickerMove 15s linear infinite;
+}
+
+@keyframes tickerMove {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    .hero h1 { font-size: 36px; }
+    section { padding: 60px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h2>Forex Survivors</h2>
+<div>
+<a href="#forex">Forex</a>
+<a href="#book">Book</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<canvas id="chart-bg"></canvas>
+<h1>Survive the Market. Master the Game.</h1>
+<p>Learn forex trading the professional way. No signals. Just real knowledge.</p>
+<a class="btn" href="https://wa.me/27750577541">Buy Book</a>
+<a class="btn" href="#education">Start Learning</a>
+</div>
+
+<!-- LIVE TICKER -->
+<div class="ticker">
+<span>EUR/USD 1.1078 ▲ 0.23%  |  GBP/USD 1.3259 ▼ 0.12%  |  USD/JPY 134.2 ▲ 0.18%  |  BTC/USD 27,850 ▲ 0.42%</span>
+</div>
+
+<!-- WHAT IS FOREX -->
+<section id="forex">
+<h2>What is Forex Trading?</h2>
+<div class="card">
+<p>Forex (Foreign Exchange) is the global market where currencies are traded. Traders profit by buying and selling currency pairs.</p>
+</div>
+<div class="card" style="animation-delay:0.2s;">
+<p>The market is controlled by banks, institutions, and liquidity. Understanding how money flows is key to becoming profitable.</p>
+</div>
+</section>
+
+<!-- BOOK -->
+<section id="book">
+<h2>Forex Survivors Book</h2>
+<div class="card">
+<p>Learn how to trade using Smart Money Concepts, understand market structure, and develop a winning mindset.</p>
+<a class="btn" href="https://wa.me/27750577541">Buy on WhatsApp</a>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<h2>Free Education</h2>
+<div class="card">
+<p>Follow us on social media for free forex education. No hype, just real knowledge.</p>
+<a class="btn" href="#">TikTok</a>
+<a class="btn" href="#">Instagram</a>
+<a class="btn" href="#">Facebook</a>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+<p>WhatsApp: 075 057 7541</p>
+<p>Socials: Forex Survivors</p>
+<a class="btn" href="https://wa.me/27750577541">Message Now</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Forex Survivors</p>
+</footer>
+
+<!-- CANDLES BACKGROUND SCRIPT -->
+<script>
+const canvas = document.getElementById('chart-bg');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let candles = [];
+const candleCount = 50;
+
+for (let i = 0; i < candleCount; i++) {
+    candles.push({
+        x: i*(canvas.width/candleCount),
+        w: canvas.width/candleCount*0.6,
+        h: Math.random()*100+50,
+        dir: Math.random() > 0.5 ? 1 : -1
+    });
+}
+
+function draw() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    candles.forEach(c => {
+        ctx.fillStyle = c.dir === 1 ? 'lime' : 'red';
+        ctx.fillRect(c.x, canvas.height/2 - c.h/2, c.w, c.h);
+        c.h += (Math.random()-0.5)*2;
+    });
+    requestAnimationFrame(draw);
+}
+
+draw();
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+</script>
+
+</body>
+</html>
